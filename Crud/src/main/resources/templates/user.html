@@ -7,7 +7,7 @@
  <body>
   <form id="userform" method="post" action="/user" class="formuser" th:object="${userForm}">
     <h3>ユーザー登録</h3>
-    <!-- ユーザーID -->
+    <!-- userID -->
       <label for="id">ID</label>
       <input type="text" class="form" th:field="*{id}" th:errorclass="error"/>
    <div class="invalid" th:errors="*{id}"></div>
@@ -15,7 +15,7 @@
       <label for="password">Password</label>
       <input type="password" class="form" th:field="*{password}" th:errorclass="error"/>
       <div class="invalid" th:errors="*{password}"></div>
-    <!-- ユーザー名 -->
+    <!-- user名 -->
       <label for="name">Name</label>
       <input type="text" class="form" th:field="*{name}" th:errorclass="error"/>
    <div class="invalid" th:errors="*{name}"></div>

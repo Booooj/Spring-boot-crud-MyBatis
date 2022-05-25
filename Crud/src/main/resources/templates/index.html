@@ -4,15 +4,12 @@
  <title>一覧</title>
 </head>
 <body>
-   <h1>User一覧</h1>
+   <h1>会員一覧</h1>
         <a th:href="@{'/index'}">会員一覧</a>
      
-            ID
-           ユーザー名
-         
           <tr th:each="content: ${index}">
-            <td th:text="${content.id}"></td>
-            <td th:text="${content.name}"></td>
+           ID <td th:text="${content.id}"></td>
+            会員名<td th:text="${content.name}"></td>
               <a th:href="@{'/detail/' + ${content.id}}">
                 詳細
               </a>

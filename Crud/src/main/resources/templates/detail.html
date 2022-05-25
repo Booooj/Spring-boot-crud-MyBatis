@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>詳細</title>
+</head>
+<body>
+      <h1>ユーザー詳細</h1>
+    
+    <form id="detailpage" method="post" th:action="@{/detail}" class="form-signup" th:object="${DetailForm}">
+   
+      <input type="hidden" th:field="*{id}" />
+      <!-- ユーザー詳細情報 -->
+      <table>
+        <tbody>
+          <tr>
+            <th>ユーザーID</th>
+            <td th:text="*{id}"></td>
+          </tr>
+         
+            <th>ユーザー名</th>
+            <td>
+              <input type="text" class="form" th:field="*{name}"/>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+        <!-- 削除ボタン -->
+        <button type="submit" name="delete">
+          削除
+        </button>
+        <!-- 更新ボタン -->
+        <button type="submit" name="update">
+          更新
+        </button>
+      
+    </form> 
+</body>
+</html>

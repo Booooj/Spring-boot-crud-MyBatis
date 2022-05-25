@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+ <title>ユーザー一覧</title>
+</head>
+<body>
+   <h1>ユーザー一覧</h1>
+        <a th:href="@{'/index'}">ユーザ一覧</a>
+    <!-- 一覧表示 -->
+   
+      <table>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>ユーザー名</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr th:each="content: ${index}">
+            <td th:text="${content.id}"></td>
+            <td th:text="${content.name}"></td>
+            <td>
+              <a th:href="@{'/detail/' + ${content.id}}">
+                詳細
+              </a>
+            </td>
+          </tr>
+        </tbody>
+</body>
+</html>

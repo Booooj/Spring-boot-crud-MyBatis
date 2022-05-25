@@ -9,15 +9,11 @@
     <form id="detailpage" method="post" th:action="@{/detail}" class="form-signup" th:object="${DetailForm}">
       <input type="hidden" th:field="*{id}" />
     
-     
            ID
             <td th:text="*{id}"></td>
-         
-         
-            ユーザー名
-           
+        
+            会員名
               <input type="text" class="form" th:field="*{name}"/>
-            
        
         <button type="submit" name="delete">
           削除
